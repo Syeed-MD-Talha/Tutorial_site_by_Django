@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}
+Python Hello World - CodeQuest Tutorials
+{% endblock title %}
+
+{% block style %}
+  <link rel="stylesheet" href='{% static "home.css" %}'>
+  <link rel="stylesheet" href='{% static "python_base.css" %}'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
+{% endblock style %}
+
+{% block script %}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+{% endblock script %}
+
+{% block content %}
+<header>
+    <h1>Python Hello World</h1>
+</header>
+<div class="container">
+    {% include "topic.html" %}
+    <main class="content">
+        <section id="introduction">
+            <h2>Welcome to Your First Python Program!</h2>
+            <p>Hey there, future Python master! 👋 Ready to start your coding journey? Let's begin with the famous "Hello, World!" program. It's like the first word a baby says, but for programmers!</p>
+            
+            <blockquote>
+                <p>"If you can write 'Hello World', you can change the world." - Raghu Venkatesh</p>
+            </blockquote>
+
+            <h3>What We'll Learn</h3>
+            <ul>
+                <li>How to set up a simple Python project</li>
+                <li>Writing your very first line of Python code</li>
+                <li>Running your Python program</li>
+                <li>Understanding what a function is (in super simple terms!)</li>
+            </ul>
+
+            <h3>Let's Get Started!</h3>
+            
+            <h4>Step 1: Create Your Python Workspace</h4>
+            <ol>
+                <li>Create a new folder called <code>helloworld</code> anywhere on your computer.</li>
+                <li>Open Visual Studio Code (VS Code) and select this folder.</li>
+                <li>In VS Code, create a new file and name it <code>app.py</code>.</li>
+            </ol>
+
+            <h4>Step 2: Write Your First Python Code</h4>
+            <p>In your <code>app.py</code> file, type this magical line:</p>
+            <pre><code class="language-python">print('Hello, World!')</code></pre>
+            <p>That's it! You've just written your first Python program. 🎉</p>
+
+            <h4>What's happening here?</h4>
+            <p><code>print()</code> is like a friendly robot in Python that takes whatever you give it and shows it on the screen. Here, we're asking it to display 'Hello, World!'.</p>
+
+            <h3>What is a Function?</h3>
+            <p>Think of a function like a kitchen appliance. You put something in (input), it does something (process), and gives you something back (output).</p>
+            <ul>
+                <li>A toaster takes bread (input), heats it (process), and gives you toast (output).</li>
+                <li>The <code>print()</code> function takes your message (input), prepares it (process), and displays it on the screen (output).</li>
+            </ul>
+
+            <h3>Running Your Python Program</h3>
+            <p>Now, let's see your creation come to life!</p>
+            <ol>
+                <li>Open the Terminal in VS Code (Terminal > New Terminal).</li>
+                <li>Type this command and press Enter:</li>
+            </ol>
+            <pre><code class="language-bash">python app.py</code></pre>
+            <p>If you're using Mac or Linux, you might need to use <code>python3</code> instead:</p>
+            <pre><code class="language-bash">python3 app.py</code></pre>
+            <p>You should see your message appear like magic:</p>
+            <pre><code class="language-bash">Hello, World!</code></pre>
+            <p>Congratulations! You've just run your first Python program! 🎊</p>
+
+            <h3>Try It Yourself!</h3>
+            <p>Ready to experiment? Click the button below to try writing and running Python code online:</p>
+            <a href="https://www.mycompiler.io/new/python" target="_blank" class="btn">Code Playground</a>
+
+            <h3>Extra Fun: Python IDLE</h3>
+            <p>Python comes with a built-in playground called IDLE. It's like a sandbox where you can type Python code and see the results immediately. Give it a try:</p>
+            <ol>
+                <li>Open Python IDLE on your computer.</li>
+                <li>Type <code>print('Hello, Python!')</code> and press Enter.</li>
+                <li>Watch your message appear instantly!</li>
+            </ol>
+
+            <h3>What's Next?</h3>
+            <p>You've taken your first step into the amazing world of Python programming! In the next lessons, we'll explore more Python magic, like:</p>
+            <ul>
+                <li>Creating your own variables</li>
+                <li>Making decisions in your code</li>
+                <li>Building your own functions</li>
+            </ul>
+            <p>Keep coding, and remember: every expert was once a beginner. You're doing great! 💪</p>
+        </section>
+    </main>
+</div>
+{% endblock content %}
